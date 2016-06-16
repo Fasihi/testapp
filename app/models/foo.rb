@@ -1,3 +1,5 @@
 class Foo < ActiveRecord::Base  
-	Some changes here and there and lets live in peace
+	Somelksjdlfjsldjkfklj changes here and there and lets live in peace
+	sdfjslakdjfklsjlkfjlsjjj
+	there is so much painn out there
 end
