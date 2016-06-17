@@ -1,0 +1,10 @@
+Wed, 15 Jun 2016 12:39:02 +0500
+doc/README_FOR_APP	Wed, 15 Jun 2016 11:52:13 +0500
+app/controllers/application_controller.rb	Wed, 15 Jun 2016 11:52:13 +0500
+app/controllers/instructors_controller.rb	Wed, 15 Jun 2016 12:22:32 +0500
+app/helpers/application_helper.rb	Wed, 15 Jun 2016 11:52:13 +0500
+app/helpers/instructors_helper.rb	Wed, 15 Jun 2016 12:22:32 +0500
+app/models/course.rb	Wed, 15 Jun 2016 11:59:39 +0500
+app/models/instructor.rb	Wed, 15 Jun 2016 12:22:32 +0500
+app/models/lab.rb	Wed, 15 Jun 2016 12:00:00 +0500
+app/models/teaching_assistant.rb	Wed, 15 Jun 2016 11:58:45 +0500
