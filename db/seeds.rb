@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -5,3 +6,39 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# Movie.destroy_all
+
+# Movie.create!([{
+#   title: "Ant-Man",
+#   director: "Peyton Reed",
+#   storyline: "Armed with the astonishing ability to shrink in scale but increase in strength, con-man Scott Lang must embrace his inner-hero and help his mentor, Dr. Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
+#   watched_on: 5.days.ago
+# },
+# {
+#   title: "Pixels",
+#   director: "Chris Columbus",
+#   storyline: "When aliens misinterpret video feeds of classic arcade games as a declaration of war, they attack the Earth in the form of the video games.",
+#   watched_on: 3.days.ago
+# },
+# {
+#   title: "Terminator Genisys",
+#   director: "Alan Taylor",
+#   storyline: "When John Connor, leader of the human resistance, sends Sgt. Kyle Reese back to 1984 to protect Sarah Connor and safeguard the future, an unexpected turn of events creates a fractured timeline. Now, Sgt. Reese finds himself in a new and unfamiliar version of the past, where he is faced with unlikely allies, including the Guardian, dangerous new enemies, and an unexpected new mission: To reset the future...",
+#   watched_on: 10.days.ago
+# }])
+
+# p "Created #{Movie.count} movies"
+
+puts "Seeds go here"
+
+["Windows", "Linux", "Mac OS X"].each do |os|
+	OperatingSystem.find_or_create_by_name(os)
+end
+
+Country.delete_all
+open("http://openconcept.ca/sites/openconcept.ca/files/country_code_drupal_0.txt") do |countries|
+	countries.read.each_line do |country|
+		code, name = country.chomp.split("|")
+		Country.create!(:name => name, :code => code)
+	end
+end

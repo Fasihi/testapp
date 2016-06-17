@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  director: MyString
+  storyline: MyText
+  watched_on: 2016-06-17
+
+two:
+  title: MyString
+  director: MyString
+  storyline: MyText
+  watched_on: 2016-06-17
